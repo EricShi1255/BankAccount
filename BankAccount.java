@@ -42,7 +42,11 @@ public class BankAccount {
             balance -= amount;
             return true;
         }
-        
     } 
+    public String toString(){
+        //AccountID and balance in the format:   "ID\tBALANCE" e.g. "5213452\t99.423"
+        return(accountID + "\t" + String.valueOf(balance));
+    } 
+
 
 }
