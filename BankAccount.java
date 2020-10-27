@@ -10,7 +10,7 @@ public class BankAccount {
         balance = 0;
         accountID = accountIDi;
         password = passwordi;
-    }
+    }   
     /*standard accessor methods*/ 
     public double getBalance(){
         return(balance);
