@@ -5,11 +5,11 @@ public class BankAccount {
     private String password;
    
     //constructor
-    public BankAccount(int accountIDi, String passwordi) {
+    public BankAccount(int accountID, String password) {
         //initialize
         balance = 0;
-        accountID = accountIDi;
-        password = passwordi;
+        accountID = accountID;
+        password = password;
     }   
     /*standard accessor methods*/ 
     public double getBalance(){
