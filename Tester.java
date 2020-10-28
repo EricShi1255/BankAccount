@@ -3,9 +3,8 @@ public class Tester {
         //balance accountid password
         BankAccount d1 = new BankAccount(222661217, "1020");
         d1.deposit(100);
-        d1.withdraw(200);
-        d1.deposit(100.5);
-        d1.setPassword("3260");
+        BankAccount d2 = new BankAccount(205002604, "3260");
+        d1.transferTo(d2, 50, "1020");
         System.out.println(d1.toString());
     }
 }   

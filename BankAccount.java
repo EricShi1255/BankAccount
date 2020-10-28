@@ -8,8 +8,8 @@ public class BankAccount {
     public BankAccount(int accountID, String password) {
         //initialize
         balance = 0;
-        accountID = accountID;
-        password = password;
+        this.accountID = accountID;
+        this.password = password;
     }   
     /*standard accessor methods*/ 
     public double getBalance(){
@@ -45,8 +45,18 @@ public class BankAccount {
     } 
     public String toString(){
         //AccountID and balance in the format:   "ID\tBALANCE" e.g. "5213452\t99.423"
-        return(accountID + "\t" + String.valueOf(balance));
+        return("#" + accountID + "\t $" + String.valueOf(balance));
     } 
-
+    private boolean authenticate(String password) {
+        return (this.password.equals(password));
+    }
+    public boolean transferTo(BankAccount other, double amount, String password) {
+        if (authenticate(password) && withdraw(amount) ) {
+            if (other.deposit(amount)) {
+                return true;
+            }
+        }
+        return false;
+    }
 
 }
